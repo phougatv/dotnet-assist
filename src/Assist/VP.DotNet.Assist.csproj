@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>Vedant Phougat</Authors>
+    <Company>Phougat Enterprise</Company>
+    <Description>DotNet-Assist provides a range of extension methods that assist you during the development of your product.</Description>
+    <PackageId>DotNet.Assist</PackageId>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
