@@ -6,10 +6,11 @@
     <Nullable>enable</Nullable>
     <Authors>Vedant Phougat</Authors>
     <Company>Phougat Enterprise</Company>
-    <Description>DotNet-Assist provides a range of extension methods that assist you during the development of your product.</Description>
-    <PackageId>DotNet.Assist</PackageId>
+    <Description>VP.DotNet.Assist provides a range of extension methods that assist you during the development of your product.</Description>
+    <PackageId>VP.DotNet.Assist</PackageId>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/phougatv/vp-dotnet-assist</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
