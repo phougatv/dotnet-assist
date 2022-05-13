@@ -2,6 +2,10 @@
 
 using System;
 
+/// <summary>
+/// NumericExtension class
+/// Contains the extensions for SByte, Int16, Int32, and Int64 for now.
+/// </summary>
 public static class NumericExtension
 {
 	#region Byte Extensions
