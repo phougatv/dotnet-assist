@@ -3,19 +3,15 @@
 using System.Diagnostics.CodeAnalysis;
 
 /// <summary>
-/// IComparableExtension class.
-/// 
-/// IMPORTANT NOTE -
-///		It uses CompareTo() of IComparable<T> for comparison.
-///		So the output of all these extension methods depends on implementaion of CompareTo() method.
-///		Here are the types you can use these extensions with - https://docs.microsoft.com/en-us/dotnet/api/system.icomparable-1?view=net-6.0
+/// IComparableExtension class. See - https://docs.microsoft.com/en-us/dotnet/api/system.icomparable-1?view=net-6.0
+/// Uses 'CompareTo(T)' for comparison
 /// </summary>
 public static class IComparableExtension
 {
 	/// <summary>
 	/// Checks if <paramref name="left"/> operand is equal to <paramref name="right"/> operand.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="left">The <paramref name="left"/></param>
 	/// <param name="right">The <paramref name="right"/></param>
 	/// <returns>True if <paramref name="left"/> is equal to <paramref name="right"/>, false otherwise.</returns>
@@ -32,7 +28,7 @@ public static class IComparableExtension
 	/// <summary>
 	/// Checks if the <paramref name="left"/> is greater than <paramref name="right"/>.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="left">The <paramref name="left"/></param>
 	/// <param name="right">The <paramref name="right"/></param>
 	/// <returns>True if <paramref name="left"/> is greater than <paramref name="right"/>, false otherwise.</returns>
@@ -49,7 +45,7 @@ public static class IComparableExtension
 	/// <summary>
 	/// Checks if the <paramref name="left"/> is greater than or equal to<paramref name="right"/>.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="left">The <paramref name="left"/></param>
 	/// <param name="right">The <paramref name="right"/></param>
 	/// <returns>True if <paramref name="left"/> is greater than or equal to <paramref name="right"/>, false otherwise.</returns>
@@ -66,7 +62,7 @@ public static class IComparableExtension
 	/// <summary>
 	/// Checks if the <paramref name="left"/> is less than <paramref name="right"/>.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="left">The <paramref name="left"/></param>
 	/// <param name="right">The <paramref name="right"/></param>
 	/// <returns>True if <paramref name="left"/> is less than <paramref name="right"/>, false otherwise.</returns>
@@ -83,7 +79,7 @@ public static class IComparableExtension
 	/// <summary>
 	/// Checks if the <paramref name="left"/> is less than equal to <paramref name="right"/>.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="left">The <paramref name="left"/></param>
 	/// <param name="right">The <paramref name="right"/></param>
 	/// <returns>True if <paramref name="left"/> is less than equal to <paramref name="right"/>, false otherwise.</returns>
@@ -100,7 +96,7 @@ public static class IComparableExtension
 	/// <summary>
 	/// Checks if item exists between <paramref name="low"/> and <paramref name="high"/>, both inclusive.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="item">The item</param>
 	/// <param name="low">The start value of the range.</param>
 	/// <param name="high">The end value of the range.</param>
@@ -119,7 +115,7 @@ public static class IComparableExtension
 	/// <summary>
 	/// Checks if item do not exists between <paramref name="low"/> and <paramref name="high"/>, both inclusive.
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T">The type.</typeparam>
 	/// <param name="item">The item</param>
 	/// <param name="low">The start value of the range.</param>
 	/// <param name="high">The end value of the range.</param>
