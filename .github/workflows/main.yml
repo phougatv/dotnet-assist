@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: dotnet package
 
 # Controls when the workflow will run
 on:
@@ -19,30 +19,22 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: ['5.0.x', '6.0.x' ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: step 1
-        run: echo "step 1 - 🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - name: step 2
-        run: echo "step 2 - 🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - name: step 3
-        run: echo "step 3 - 🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: step 4 - Check out repository code
+      - name: Check out repository code
         uses: actions/checkout@v3
-      - name: step 5
-        run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - name: step 6
-        run: echo "🖥️ The workflow is now ready to test your code on the runner."
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!!!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
