@@ -1,10 +1,4 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.IComparableExtensionTests;
-
-using System;
-using Xunit;
-using FluentAssertions;
-using VP.DotNet.Assist.Extensions;
-
 public class IsGreaterThanShould
 {
 	[Fact]
