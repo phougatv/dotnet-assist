@@ -1,10 +1,4 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.IComparableExtensionTests;
-
-using FluentAssertions;
-using System;
-using VP.DotNet.Assist.Extensions;
-using Xunit;
-
 public class HaveSamePositionShould
 {
 	[Fact]

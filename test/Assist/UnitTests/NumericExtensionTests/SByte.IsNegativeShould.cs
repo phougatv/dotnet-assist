@@ -1,10 +1,4 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.NumericExtensionTests;
-
-using FluentAssertions;
-using System;
-using VP.DotNet.Assist.Extensions;
-using Xunit;
-
 public class SByte_IsNegativeShould
 {
 	[Fact]

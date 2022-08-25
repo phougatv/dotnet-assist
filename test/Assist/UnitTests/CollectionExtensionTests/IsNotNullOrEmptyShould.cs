@@ -1,9 +1,6 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.CollectionExtensionTests;
 
-using FluentAssertions;
-using System;
-using VP.DotNet.Assist.Extensions;
-using Xunit;
+using VP.DotNet.Assist.UnitTest;
 
 public class IsNotNullOrEmptyShould
 {

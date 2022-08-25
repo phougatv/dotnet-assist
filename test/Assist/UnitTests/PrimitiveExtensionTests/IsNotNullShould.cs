@@ -1,11 +1,6 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.PrimitiveExtensionTests;
 
-using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using VP.DotNet.Assist.Extensions;
-using VP.DotNet.Assist.UnitTest.CollectionExtensionTests;
-using Xunit;
+using VP.DotNet.Assist.UnitTest;
 
 public class IsNotNullShould
 {

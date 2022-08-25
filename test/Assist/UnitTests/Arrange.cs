@@ -1,14 +1,9 @@
-﻿namespace VP.DotNet.Assist.UnitTest.CollectionExtensionTests;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-/// <summary>
-/// Arrange class is an internal class for arranging certain collections for unit tests.
-/// </summary>
+﻿namespace VP.DotNet.Assist.UnitTest;
 internal class Arrange
 {
+	internal static String EmptyString => String.Empty;
+	internal static String NullString => null!;
+
 	internal static IEnumerable<T> TestEnumerable<T>(params T[] args) => new List<T>(args);
 	internal static IEnumerable<T> EmptyEnumerable<T>() => Enumerable.Empty<T>();
 	internal static IEnumerable<T> NullEnumerable<T>() => null!;
