@@ -5,7 +5,7 @@ using System;
 using VP.DotNet.Assist.Extensions;
 using Xunit;
 
-public class IsEqualToShould
+public class HaveSamePositionShould
 {
 	[Fact]
 	public void NotThrow_NotImpelmentedException()
@@ -17,8 +17,8 @@ public class IsEqualToShould
 		var right = "Clark Kent";
 
 		//Act
-		Action actWhenBothOperandsAreEmpty = () => emptyLeft.IsEqualTo(emptyRight);
-		Action act = () => left.IsEqualTo(right);
+		Action actWhenBothOperandsAreEmpty = () => emptyLeft.HaveSamePosition(emptyRight);
+		Action act = () => left.HaveSamePosition(right);
 
 		//Assert
 		actWhenBothOperandsAreEmpty.Should().NotThrow<NotImplementedException>();
@@ -33,7 +33,7 @@ public class IsEqualToShould
 		var right = "Bruce Wayne";
 
 		//Act
-		Action actWhenLeftIsNull = () => nullLeft.IsEqualTo(right);
+		Action actWhenLeftIsNull = () => nullLeft.HaveSamePosition(right);
 
 		//Assert
 		actWhenLeftIsNull.Should().ThrowExactly<ArgumentNullException>()
@@ -49,7 +49,7 @@ public class IsEqualToShould
 		var nullRight = Arrange.NullString;
 
 		//Act
-		Action actWhenRightIsNull = () => left.IsEqualTo(nullRight);
+		Action actWhenRightIsNull = () => left.HaveSamePosition(nullRight);
 
 		//Assert
 		actWhenRightIsNull.Should().ThrowExactly<ArgumentNullException>()
@@ -65,7 +65,7 @@ public class IsEqualToShould
 		var right = "Clark Kent";
 
 		//Act
-		var actualWhenLeftIsNotEqualToRight = left.IsEqualTo(right);
+		var actualWhenLeftIsNotEqualToRight = left.HaveSamePosition(right);
 
 		//Assert
 		left.Should().Be("Bruce Wayne");
@@ -81,7 +81,7 @@ public class IsEqualToShould
 		var emptyRight = Arrange.EmptyString;
 
 		//Act
-		var actualWhenBothOperandsAreEmpty = emptyLeft.IsEqualTo(emptyRight);
+		var actualWhenBothOperandsAreEmpty = emptyLeft.HaveSamePosition(emptyRight);
 
 		//Assert
 		emptyLeft.Should().BeEmpty();
@@ -97,7 +97,7 @@ public class IsEqualToShould
 		var right = "Bruce Wayne";
 
 		//Act
-		var actualWhenBothOperandsAreEqual = left.IsEqualTo(right);
+		var actualWhenBothOperandsAreEqual = left.HaveSamePosition(right);
 
 		//Assert
 		left.Should().NotBeEmpty();
