@@ -16,7 +16,7 @@ public static class IComparableExtension
 	/// <param name="right">The <paramref name="right"/></param>
 	/// <returns>True if <paramref name="left"/> is equal to <paramref name="right"/>, false otherwise.</returns>
 	/// <exception cref="ArgumentNullException"></exception>
-	public static Boolean IsEqualTo<T>(this T left, T right)
+	public static Boolean HaveSamePosition<T>(this T left, T right)
 		where T : IComparable<T>
 	{
 		ArgumentNullException.ThrowIfNull(left, nameof(left));
@@ -56,7 +56,7 @@ public static class IComparableExtension
 		ArgumentNullException.ThrowIfNull(left, nameof(left));
 		ArgumentNullException.ThrowIfNull(right, nameof(right));
 
-		return left.IsGreaterThan(right) || left.IsEqualTo(right);
+		return left.IsGreaterThan(right) || left.HaveSamePosition(right);
 	}
 
 	/// <summary>
@@ -90,7 +90,7 @@ public static class IComparableExtension
 		ArgumentNullException.ThrowIfNull(left, nameof(left));
 		ArgumentNullException.ThrowIfNull(right, nameof(right));
 
-		return left.IsLessThan(right) || left.IsEqualTo(right);
+		return left.IsLessThan(right) || left.HaveSamePosition(right);
 	}
 
 	/// <summary>
