@@ -1,27 +1,27 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.NumericExtensionTests;
-public class Int16_IsNegativeShould
+public class Int64_IsNegativeShould
 {
 	[Fact]
 	public void NotThrow_NotImplementedException()
 	{
 		//Arrange
-		Int16 intMaxValue = Int16.MaxValue;
-		Int16 intMinValue = Int16.MinValue;
+		Int64 intMaxValue = Int64.MaxValue;
+		Int64 intMinValue = Int64.MinValue;
 
 		//Act
-		Action actWhenInt16Max = () => intMaxValue.IsNegative();
-		Action actWhenInt16Min = () => intMinValue.IsNegative();
+		Action actWhenInt64Max = () => intMaxValue.IsNegative();
+		Action actWhenInt64Min = () => intMinValue.IsNegative();
 
 		//Assert
-		actWhenInt16Max.Should().NotThrow<NotImplementedException>();
-		actWhenInt16Min.Should().NotThrow<NotImplementedException>();
+		actWhenInt64Max.Should().NotThrow<NotImplementedException>();
+		actWhenInt64Min.Should().NotThrow<NotImplementedException>();
 	}
 
 	[Fact]
 	public void ReturnFalse_WhenNumberIsZero()
 	{
 		//Arrange
-		Int16 intZero = Int16.MaxValue + Int16.MinValue + 1;
+		Int64 intZero = Int64.MaxValue + Int64.MinValue + 1;
 
 		//Act
 		var actualWhenIntIsZero = intZero.IsNegative();
@@ -34,7 +34,7 @@ public class Int16_IsNegativeShould
 	public void ReturnFalse_WhenNumberIsPositive()
 	{
 		//Arrange
-		Int16 intPositive = Int16.MaxValue;
+		Int64 intPositive = Int64.MaxValue;
 
 		//Act
 		var actualWhenIntIsPositive = intPositive.IsNegative();
@@ -47,7 +47,7 @@ public class Int16_IsNegativeShould
 	public void ReturnTrue_WhenNumberIsNegative()
 	{
 		//Arrange
-		Int16 intNegative = Int16.MinValue;
+		Int64 intNegative = Int64.MinValue;
 
 		//Act
 		var actualWhenIntIsNegative = intNegative.IsNegative();
