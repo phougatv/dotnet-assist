@@ -1,12 +1,12 @@
 ﻿namespace VP.DotNet.Assist.UnitTest.NumericExtensionTests;
-public class Int16_IsOddShould
+public class Int64_IsOddShould
 {
 	[Fact]
 	public void NotThrow_NotImpelmentedException()
 	{
 		//Arrange
-		Int16 intMinus1 = -1;
-		Int16 intSecondToMinValue = Int16.MinValue + 1;
+		Int64 intMinus1 = -1;
+		Int64 intSecondToMinValue = Int64.MinValue + 1;
 
 		//Act
 		Action actWhenMinus1 = () => intMinus1.IsOdd();
@@ -21,8 +21,8 @@ public class Int16_IsOddShould
 	public void ReturnFalse_WhenNumberIsEvenAndNegative()
 	{
 		//Arrange
-		Int16 intMinus2 = -2;
-		Int16 intMinValue = Int16.MinValue;
+		Int64 intMinus2 = -2;
+		Int64 intMinValue = Int64.MinValue;
 
 		//Act
 		var actualWhenMinus2 = intMinus2.IsOdd();
@@ -30,9 +30,9 @@ public class Int16_IsOddShould
 
 		//Assert
 		intMinus2.Should().BeNegative()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		intMinValue.Should().BeNegative()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		actualWhenMinus2.Should().BeFalse();
 		actualWhenMinValue.Should().BeFalse();
 	}
@@ -41,8 +41,8 @@ public class Int16_IsOddShould
 	public void ReturnFalse_WhenNumberIsEvenAndPositive()
 	{
 		//Arrange
-		Int16 int2 = 2;
-		Int16 intMaxValueMinus1 = Int16.MaxValue - 1;
+		Int64 int2 = 2;
+		Int64 intMaxValueMinus1 = Int64.MaxValue - 1;
 
 		//Act
 		var actualWhen2 = int2.IsOdd();
@@ -50,9 +50,9 @@ public class Int16_IsOddShould
 
 		//Assert
 		int2.Should().BePositive()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		intMaxValueMinus1.Should().BePositive()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		actualWhen2.Should().BeFalse();
 		actualWhenMaxValueMinus1.Should().BeFalse();
 	}
@@ -61,8 +61,8 @@ public class Int16_IsOddShould
 	public void ReturnTrue_WhenNumberIsOddAndNegative()
 	{
 		//Arrange
-		Int16 intMinus1 = -1;
-		Int16 intSecondToMinValue = Int16.MinValue + 1;
+		Int64 intMinus1 = -1;
+		Int64 intSecondToMinValue = Int64.MinValue + 1;
 
 		//Act
 		var actualWhenMinus1 = intMinus1.IsOdd();
@@ -70,9 +70,9 @@ public class Int16_IsOddShould
 
 		//Assert
 		intMinus1.Should().BeNegative()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		intSecondToMinValue.Should().BeNegative()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		actualWhenMinus1.Should().BeTrue();
 		actualWhenSecondToMinValue.Should().BeTrue();
 	}
@@ -81,9 +81,9 @@ public class Int16_IsOddShould
 	public void ReturnTrue_WhenNumberIsOddAndPositive()
 	{
 		//Arrange
-		Int16 int1 = 1;
-		Int16 int19 = 19;
-		Int16 intMaxValue = Int16.MaxValue;
+		Int64 int1 = 1;
+		Int64 int19 = 19;
+		Int64 intMaxValue = Int64.MaxValue;
 
 		//Act
 		var actualWhen1 = int1.IsOdd();
@@ -92,11 +92,11 @@ public class Int16_IsOddShould
 
 		//Assert
 		int1.Should().BePositive()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		int19.Should().BePositive()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 		intMaxValue.Should().BePositive()
-			.And.BeOfType(typeof(Int16));
+			.And.BeOfType(typeof(Int64));
 
 		actualWhen1.Should().BeTrue();
 		actualWhen19.Should().BeTrue();
